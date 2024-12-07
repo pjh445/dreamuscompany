@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+* {
+    margin:0; padding:0; box-sizing: border-box;
+}
+html,body {
+    font-family: "Noto Sans KR", sans-serif;
+    background:rgb(40, 40, 40);
+}
+a {
+    text-decoration: none;
+    color:black;
+}
+img {
+    display:block; max-width:100%;
+}
+
+#layout {
+    max-width:1200px;  min-height:100vh;
+    margin:auto; 
+    background-color: white;   
+}
+
+header{
+    height:586px;
+    background: url('../images/bg-1.jpg');   
+    padding:37px 10px 0 10px;  
+}
+header> div {
+    max-width:940px; margin:auto; 
+    display:flex; align-items: flex-start;
+    justify-content: space-between;
+    position:relative;
+}
+header div>a {
+   max-width:110px;
+}
+header nav a {
+    color:white; font-size:0.7rem;
+    margin-left:20px;
+    text-shadow:0 0 3px #352a29;
+}
+h1 {
+    position:absolute;
+    color:white;
+    font-weight:500; font-size:1.7rem;
+    right:30px; margin-top:280px;
+}
+header div+ img {
+    margin-top:-100px;
+}
+
+main {
+    max-width:650px; margin:auto;
+    padding:100px 10px;
+}
+main section {
+    display:flex; 
+    justify-content: space-between;
+    padding-bottom:75px;
+    text-align: justify;
+}
+main section h2 {
+    padding-top:40px;
+    font-size:2.2rem;
+}
+main section h2 span {
+    font-size:0.65rem; font-weight:400;
+    color:#444;
+    display:block; padding-top:10px; 
+    text-align: justify;
+}
+
+main section:nth-child(1) h2 span {
+    max-width:165px;
+}
+main section:nth-child(2) h2 span {
+    max-width:285px;
+}
+
+
+footer {
+    margin-top:60px;
+    border-top:1px solid #e9e9e9;
+    max-width:900px; margin:auto;
+    padding:0 10px 50px 10px;
+}
+footer nav {
+    display:flex;
+    padding:37px 0 32px;
+}
+footer nav a {
+    margin-right:29px;
+    position:relative; z-index: 1;    
+}
+footer address, footer p {
+    font-size:0.7rem;
+    font-style:normal;
+}
+footer address:nth-of-type(1){
+    padding-bottom:13px;
+}
+footer address:nth-of-type(2){
+    padding-bottom:6px;
+}
+footer p {
+    padding-top:24px;
+    font-size:0.65rem;
+}
+footer b{
+    display:inline-block;
+    color:#dcdcdc;     
+    padding:0 4px;
+    font-size:0.5rem;
+    transform:translateY(-2px);   
+}
+
+@media(max-width:500px) {
+    header> div {
+        flex-direction: column;        
+    }
+    header nav {
+        padding-top:20px;
+    }
+    main section h2 {
+        padding-top:0px;
+        font-size:2.2rem;
+    }
+    main section img {
+        width:50%;
+    }
+    main section:nth-child(odd) img {
+        margin-left:10px;
+    }
+    main section:nth-child(even) img {
+        margin-right:10px;
+    }
+}
