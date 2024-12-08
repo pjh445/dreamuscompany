@@ -114,13 +114,17 @@ footer b{
     font-size:0.5rem;
     transform:translateY(-2px);   
 }
-
+/****************************************/
 @media(max-width:500px) {
     header> div {
-        flex-direction: column;        
+        flex-direction: column; 
     }
     header nav {
         padding-top:20px;
+        width:100%; display: flex; justify-content: space-around;
+    }
+    header nav a {
+         margin:0;
     }
     main section h2 {
         padding-top:0px;
